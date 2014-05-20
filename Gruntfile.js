@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         flatten: false,
-        assets: 'dist/assets/',
+        assets: 'assets/',
         data: ['src/data/*.json'],
       },
       dist: {
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'src/pages/',
         src: '**/*.html',
-        dest: 'dist/'
+        dest: ''
       }
     },
 
@@ -31,16 +31,16 @@ module.exports = function(grunt) {
           outputStyle: 'expanded'
         },
         files: {
-          'dist/assets/css/app.css': 'src/assets/scss/app.scss'
-        }        
+          'assets/css/app.css': 'src/assets/scss/app.scss'
+        }
       }
     },
 
     copy: {
       dist: {
         files: [
-          {expand:true, cwd: 'src/assets/', src: ['**/*','!{scss,js}/**/*'], dest: 'dist/assets/', filter:'isFile'},
-          {expand:true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'dist/assets/js', filter:'isFile'}
+          {expand:true, cwd: 'src/assets/', src: ['**/*','!{scss,js}/**/*'], dest: 'assets/', filter:'isFile'},
+          {expand:true, cwd: 'bower_components/modernizr/', src: 'modernizr.js', dest: 'assets/js', filter:'isFile'}
         ]
       }
     },
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'dist/assets/js/all.js': ['bower_components/jquery/dist/jquery.js', 'bower_components/foundation/js/foundation.js', 'src/assets/js/*']
+          'assets/js/all.js': ['bower_components/jquery/dist/jquery.js', 'bower_components/foundation/js/foundation.js', 'src/assets/js/*']
         }
       }
     },
@@ -56,9 +56,9 @@ module.exports = function(grunt) {
     clean: ['dist/'],
 
     watch: {
-      grunt: { 
+      grunt: {
         files: ['Gruntfile.js'],
-        tasks: ['build'] 
+        tasks: ['build']
       },
 
       sass: {
