@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter);
 @import "settings";
 @import "foundation";
 
@@ -38,3 +39,104 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+body {
+  background: url(../img/bgr.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.grid-block {
+  article, aside {
+    word-wrap: break-word;
+    border-radius: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(lighten(#000, 99.7%), 0.95);
+    box-shadow: 1px 1px 1px lighten(#000, 93.5%);
+
+    .user {
+      font-size: 0.8em;
+
+      &:after {
+        content: " ";
+        display: table;
+        clear: both;
+      }
+    }
+
+    [data-scribe="element:avatar"] {
+      float: left;
+      border-radius: 3px;
+      margin-right: 0.25rem;
+      box-shadow: 0 1px 0 #FFF;
+    }
+
+    [data-scribe="element:name"], [data-scribe="element:screen_name"] {
+      display: block;
+    }
+
+    [data-scribe="element:screen_name"] {
+      color: #707070;
+      font-size: 0.8em;
+    }
+
+    a[href^="http://t.co"] {
+      color: darken($primary-color, 8%);
+      font-size: 0.95em;
+    }
+
+    .timePosted {
+      margin: 0;
+      font-size: 0.8em;
+      color: #707070;
+    }
+  }
+}
+
+.ribbon {
+  background-color: $primary-color;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 999;
+  /* top left corner */
+  position: fixed;
+  right: -50px;
+  bottom: 40px;
+  /* 45 deg ccw rotation */
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+     -moz-box-shadow: 0 0 10px #888;
+          box-shadow: 0 0 10px #888;
+
+  a {
+    border: 1px dashed lighten($primary-color, 95%);
+    color: #fff;
+    display: block;
+    font: 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1px 0;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+    text-shadow: 0 0 5px #444;
+  }
+}
+
+p.lead {
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: lighten(#000, 35%);
+}
+
+.side-nav {
+  .heading {
+    text-transform: uppercase;
+    color: lighten(#000, 45%);
+  }
+}
