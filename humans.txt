@@ -1,0 +1,14 @@
+/* TEAM */
+Your title: Chris Violette
+Site: cv-designs.com
+Twitter: @pixleight
+Location: Brewer, Maine, USA
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, Orbit, Reveal, Foundation
+  Software: Atom, Sublime Text, Git
+
+/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
+/* zurb.com */
+/* humanstxt.org */
